@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function roll() {
         dice.setAttribute('disabled', true);
-        fetch('/nounlist.txt', { cache: "force-cache" })
+        fetch('https://nzwsch.github.io/random-name-generator/nounlist.txt', { cache: "force-cache" })
             .then(response => response.text())
             .then(text => {
                 const nounlist = text.split('\n')
